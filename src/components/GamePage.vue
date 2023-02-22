@@ -73,7 +73,7 @@ function startGame(playerName) {
 }
 
 function endGame(failMessage) {
-  console.log("l76");
+  setCanStartGame(false);
   setFailMessage(failMessage);
   leaderBoard.value.push({
     name: playerName.value,
@@ -95,11 +95,11 @@ function resetGame(newPlayer) {
   setPlayerScore(0);
   setTimePassed(0);
   if (newPlayer) {
-    setCanStartGame(false);
     setPlayerName(null);
     setOpenStartModal(true);
   }
 
+  setCanStartGame(true);
   setOpenEndModal(false);
 }
 </script>

@@ -186,6 +186,7 @@ export default {
           this.snake[0].y >= this.height
         ) {
           this.reset();
+          //  clearInterval(this.interval);
           const failMessage = "Too bad, you touched the border";
           this.endGame(failMessage);
           return;
